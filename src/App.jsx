@@ -16,7 +16,7 @@ export default function App() {
       <div>
         <Cursor hovering={hovering} />
         <Navbar />
-        <BackToTop />
+        <BackToTop setHovering={setHovering}/>
         <Hero
           id="home"
           title="Home"
@@ -25,7 +25,7 @@ export default function App() {
         />
         <Projects id="projects" title="Projects" setHovering={setHovering} />
         <Skills id="skills" title="Skills" />
-        <Contact id="contact" title="Contact" />
+        <Contact id="contact" title="Contact" setHovering={setHovering}/>
       </div>
     </>
   );

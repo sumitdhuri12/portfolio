@@ -6,7 +6,9 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 
 
-function BackToTop() {
+function BackToTop({setHovering}) {
+  const textEnter = () => setHovering(true);
+  const textLeave = () => setHovering(false);
   const [visible, setVisible] = useState(false);
 
   const handleScroll = useCallback(() => {

@@ -4,7 +4,9 @@ import { Avatar } from "../models/Avatar";
 import { Perf } from "r3f-perf";
 import Fox from "../models/Fox";
 
-const Contact = () => {
+const Contact = ({setHovering}) => {
+  const textEnter = () => setHovering(true);
+  const textLeave = () => setHovering(false);
   return (
     <section id="contact" className="relative">
       <div className="wrapper bg-darkgray h-screen">
@@ -29,23 +31,23 @@ const Contact = () => {
           </div>
           <div className="text-gray w-6/12 actor-regular pl-10 pt-6">
             <div className="email-content">
-              <h6 className="text-4xl">Email</h6>
-              <p className="text-2xl pt-2">sumit.sunil.dhuri@gmail.com</p>
+              <h6 className="text-2xl md:text-4xl">Email</h6>
+              <p className="text-xl md:text-2xl pt-2">sumit.sunil.dhuri@gmail.com</p>
             </div>
             <div className="email-content pt-10">
-              <h6 className="text-4xl">Contact</h6>
-              <p className="text-2xl pt-2">+91 8097429877</p>
+              <h6 className="text-2xl md:text-4xl">Contact</h6>
+              <p className="text-xl md:text-2xl pt-2">+91 8097429877</p>
             </div>
             <div className="social-content pt-10">
-              <h6 className="text-4xl">Social</h6>
-              <div className="social-icons flex gap-6 pt-4 pb-16">
-                <a href="https://www.linkedin.com/in/sumitdhuri/" target="blank">
+              <h6 className="text-2xl md:text-4xl">Social</h6>
+              <div className="social-icons flex gap-14 pt-4 pb-16">
+                <a href="https://www.linkedin.com/in/sumitdhuri/" target="blank" onMouseEnter={textEnter} onMouseLeave={textLeave}>
                   <img src="/images/linkedin_logo.png" alt="" />
                 </a>
-                <a href="mailto:sumit.sunil.dhuri@gmail.com">
+                <a href="mailto:sumit.sunil.dhuri@gmail.com" onMouseEnter={textEnter} onMouseLeave={textLeave}>
                   <img src="/images/gmail_logo.png" alt="" />
                 </a>
-                <a href="https://codepen.io/sumit-dhuri" target="blank">
+                <a href="https://codepen.io/sumit-dhuri" target="blank" onMouseEnter={textEnter} onMouseLeave={textLeave}>
                   <img src="/images/codepen_logo.png" alt="" />
                 </a>
               </div>
@@ -53,8 +55,8 @@ const Contact = () => {
           </div>
         </div>
         <div className="copyright absolute pb-4">
-          <p className="actor-regular text-md text-center text-lightgray">
-            Copyright @2024
+          <p className="actor-regular text-sm text-center text-lightgray">
+            Copyright @ 2024 Sumit Dhuri. All rights reserved.
           </p>
         </div>
       </div>
