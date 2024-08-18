@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cursor{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+
+.actor-regular {
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.banner_canvas{
+    touch-action: none;
+    position: absolute;
+}
+
+@font-face {
+    font-family: retroyal;
+    src: url(/font/retroyal-retroyal-regular-400.ttf);
+}
+
+@font-face {
+    font-family: bold;
+    src: url(/font/retroyal-retroyal-bold-700.ttf);
+}
+
+body{
+    font-family: bold;
+    cursor: none;
+    background-color: #202020;
+}
+
+a {
+    cursor: none;
+}
+
+section{
+    padding: 0;
+}
+
+section#contact{
+    padding: 0;
+}
+
+.section_title{
+    font-size: 9.6vw;
+    line-height: 0.8em;
+}
+
+.hero-content-wrapper{
+    padding-bottom: 15%;
+}
+
+.social-icons img{
+    width: 40px;
+}
+
+.copyright{
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.card:nth-child(1),
+.card:nth-child(4),
+.card:nth-child(6),
+.card:nth-child(9),
+.card:nth-child(11),
+.card:nth-child(14){
+    justify-content:start
+}
+
+.card:nth-child(3),
+.card:nth-child(7),
+.card:nth-child(10),
+.card:nth-child(13){
+    justify-content:center
+}
+
+.card:nth-child(2),
+.card:nth-child(5),
+.card:nth-child(8),
+.card:nth-child(12),
+.card:nth-child(15){
+    justify-content:end
+}
+
+
+@media screen and (min-width: 1024px) {
+    .hero-content-wrapper{
+        padding-bottom: 0;
+       }
+}
+
