@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Avatar } from "../models/Avatar";
 import { Perf } from "r3f-perf";
@@ -7,6 +7,24 @@ import Fox from "../models/Fox";
 const Contact = ({setHovering}) => {
   const textEnter = () => setHovering(true);
   const textLeave = () => setHovering(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+
+  useEffect(() => {
+    // Function to update the isMobile state
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Add event listener for resize events
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <section id="contact" className="relative">
       <div className="wrapper bg-darkgray h-screen">
@@ -17,7 +35,7 @@ const Contact = ({setHovering}) => {
         </div>
         <div className="flex flex-col md:flex-row">
           <div className="left w-full h-[300px] md:h-auto md:w-6/12 hidden md:flex">
-            <Canvas
+            {!isMobile && <Canvas
               className=""
               camera={{
                 fov: 45,
@@ -27,7 +45,7 @@ const Contact = ({setHovering}) => {
               }}
             >
               <Fox />
-            </Canvas>
+            </Canvas>}
           </div>
           <div className="text-gray w-full md:w-6/12 actor-regular pl-10 pt-6">
             <div className="email-content">
