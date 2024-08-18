@@ -17,11 +17,11 @@ const Mac = () => {
         </MeshDistortMaterial>
     </Sphere>
             <Float speed={1} rotationIntensity={0.4}>
-                <primitive object={computer.scene} position={[isMobile? -0.5: 0.9, isMobile? -0.2: -1,0.4]} scale={isMobile? 0.3: 0.5} rotation={[-0.2,-0.2,0]}/>
+                <primitive object={computer.scene} position={[isMobile? -0.5: 0.9, isMobile? 0.3: -1,0.4]} scale={isMobile? 0.3: 0.5} rotation={[-0.2,-0.2,0]}/>
             </Float>
         
             <Float speed={1.2} rotationIntensity={0.6} >
-                <primitive object={mobile.scene} position={[isMobile? -0.5: 2.2, isMobile? -0.2: -1.7,1.3]} scale={isMobile? 0.2: 0.35} rotation={[1.0,-1.8,1.0]}/>
+                <primitive object={mobile.scene} position={[isMobile? -0.5: 2.2, isMobile? 0: -1.7,1.3]} scale={isMobile? 0.2: 0.35} rotation={[1.0,-1.8,1.0]}/>
             </Float>
             
   </>

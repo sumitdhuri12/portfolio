@@ -7,7 +7,7 @@ const Verticalscroll = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["40%", "-40%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["45%", "-45%"]);
 
    // Helper function to get a random justification class
   

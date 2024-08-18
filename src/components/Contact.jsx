@@ -16,7 +16,7 @@ const Contact = ({setHovering}) => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row">
-          <div className="left w-full h-[300px] md:h-auto md:w-6/12">
+          <div className="left w-full h-[300px] md:h-auto md:w-6/12 hidden md:flex">
             <Canvas
               className=""
               camera={{
@@ -29,7 +29,7 @@ const Contact = ({setHovering}) => {
               <Fox />
             </Canvas>
           </div>
-          <div className="text-gray w-6/12 actor-regular pl-10 pt-6">
+          <div className="text-gray w-full md:w-6/12 actor-regular pl-10 pt-6">
             <div className="email-content">
               <h6 className="text-2xl md:text-4xl">Email</h6>
               <p className="text-xl md:text-2xl pt-2">sumit.sunil.dhuri@gmail.com</p>
@@ -40,7 +40,7 @@ const Contact = ({setHovering}) => {
             </div>
             <div className="social-content pt-10">
               <h6 className="text-2xl md:text-4xl">Social</h6>
-              <div className="social-icons flex gap-14 pt-4 pb-16">
+              <div className="social-icons flex gap-10 pt-4 pb-16">
                 <a href="https://www.linkedin.com/in/sumitdhuri/" target="blank" onMouseEnter={textEnter} onMouseLeave={textLeave}>
                   <img src="/images/linkedin_logo.png" alt="" />
                 </a>
