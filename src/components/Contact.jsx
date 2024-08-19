@@ -63,11 +63,11 @@ const Contact = ({setHovering}) => {
               <h6 className="text-2xl md:text-4xl">Email</h6>
               <p className="text-xl md:text-2xl pt-2">sumit.sunil.dhuri@gmail.com</p>
             </div>
-            <div className="email-content pt-10">
+            <div className="email-content pt-6 md:pt-10">
               <h6 className="text-2xl md:text-4xl">Contact</h6>
               <p className="text-xl md:text-2xl pt-2">+91 8097429877</p>
             </div>
-            <div className="social-content pt-10">
+            <div className="social-content pt-6 md:pt-10">
               <h6 className="text-2xl md:text-4xl">Social</h6>
               <div className="social-icons flex gap-10 pt-4 pb-16">
                 <a href="https://www.linkedin.com/in/sumitdhuri/" target="blank" onMouseEnter={textEnter} onMouseLeave={textLeave}>
