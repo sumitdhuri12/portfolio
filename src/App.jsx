@@ -4,15 +4,27 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Cursor from "./components/Cursor";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BackToTop from "./components/BackToTop";
 import Navbar from "./components/Navbar";
+import Loader from "./components/Loader";
 
 export default function App() {
   const [hovering, setHovering] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time for content
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust this time to simulate content loading
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
+      {loading && <Loader loading={loading} />}
       <div>
         <Cursor hovering={hovering} />
         <Navbar />

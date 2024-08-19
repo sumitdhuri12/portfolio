@@ -49,7 +49,7 @@ function Cursor({ hovering }) {
     <>
       <div
         ref={cursorRef}
-        className="fixed w-[30px] h-[30px] bg-white rounded-full z-[9999] pointer-events-none mix-blend-difference hidden md:block"
+        className="fixed w-[30px] h-[30px] bg-white rounded-full z-[9998] pointer-events-none mix-blend-difference hidden md:block"
       />
     </>
   );
