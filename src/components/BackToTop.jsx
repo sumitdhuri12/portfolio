@@ -29,7 +29,7 @@ function BackToTop({setHovering}) {
   }, [handleScroll]);
   return (
     <>
-        {visible && (<a onClick={scrollToTop} className="bg-[#000] w-[50px] h-[50px] rounded-full fixed right-[2%] bottom-[20%] text-center z-[9998] grid place-items-center">
+        {visible && (<a onClick={scrollToTop} className="bg-[#000] w-[50px] h-[50px] rounded-full fixed right-[2%] bottom-[20%] text-center z-[9995] grid place-items-center">
         <IoIosArrowUp className="text-[#bcbcbc] text-3xl" />
         </a>)}
     </>
