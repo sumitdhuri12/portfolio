@@ -34,8 +34,8 @@ const Contact = ({setHovering}) => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row">
-          <div className="left w-full h-[300px] md:h-auto md:w-6/12 hidden md:flex">
-            {!isMobile && <Canvas
+          <div className="left w-full h-[300px] md:h-auto md:w-6/12">
+            {/* {!isMobile && <Canvas
               className=""
               camera={{
                 fov: 45,
@@ -45,7 +45,18 @@ const Contact = ({setHovering}) => {
               }}
             >
               <Fox />
-            </Canvas>}
+            </Canvas>} */}
+            <Canvas
+              className=""
+              camera={{
+                fov: 45,
+                near: 0.1,
+                far: 200,
+                position: [-3, 1.5, 4],
+              }}
+            >
+              <Fox />
+            </Canvas>
           </div>
           <div className="text-gray w-full md:w-6/12 actor-regular pl-10 pt-6">
             <div className="email-content">
