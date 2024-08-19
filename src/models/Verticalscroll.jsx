@@ -13,7 +13,7 @@ const Verticalscroll = () => {
   
 
     return (
-      <section ref={targetRef} className="relative h-[200vh] md:h-[300vh] bg-neutral-900">
+      <section ref={targetRef} className="relative h-[400vh] md:h-[300vh] bg-neutral-900">
         <div className="sticky top-0 flex flex-col h-screen items-center overflow-hidden">
           <p className="section_title text-center uppercase text-lightgray pt-[8vh] md:pt-4 pb-[8vh] md:pb-0">Skills</p>
           <motion.div style={{ x }} className="flex justify-end content-end gap-1 h-[74vh] md:h-[88vh] pb-6">
